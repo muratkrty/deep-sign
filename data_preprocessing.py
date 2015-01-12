@@ -2,7 +2,7 @@
 # Date: 12/01/2015
 # Description: Data set preparetion for DeepSign project
 # Notes: 0- Change shutil.copyfile(f_path, fd_name) to
-#           shutil.move(f_path, fd_name)
+#           shutil.move(f_path, fd_name) for JIT processing.
 # Bugs: OK. NO Known
 
 import os
@@ -14,12 +14,10 @@ target_dir = './CLASS_SET/'
 
 def create_sub_folder_list(data_dir, target_dir, f_pos, f_neg):
     """ Traverse along target directory and extract path list. """
-    
     path_list = []
     for dir_name, sub_dir_names, file_names in os.walk(data_dir):
         for sub_dir_name in sub_dir_names:        
             path = os.path.join(target_dir, sub_dir_name) 
-            print path
             path_list.append(os.path.join(path, f_neg))
             path_list.append(os.path.join(path, f_pos))
 
@@ -28,7 +26,6 @@ def create_sub_folder_list(data_dir, target_dir, f_pos, f_neg):
 def create_sub_folders(folder_list):
     """ Create fraud and real sub folder in target_dir subfolders. """
     for s_folder in folder_list:
-        print s_folder
         if not os.path.exists(s_folder):
             os.makedirs(s_folder)
 
