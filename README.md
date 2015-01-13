@@ -8,5 +8,5 @@ for each signature owner. The images in 600 dots per in resolution (dpi) and in
 total we have 96000 genuine signature images and 120000 faked signature images.
 
 1- **Data pre-processing files**  
-   data_preprocessing.py
-   
+    data_preprocessing.py  
+    image_preprocessing.py
