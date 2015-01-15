@@ -23,6 +23,7 @@ for i = 1 : f_size,
     inp_vec = createInputVector(binary_img, image);
     out_vec = createOutputVector(out_class, network.num_of_class)
     
+    % mat_x' and mat_y' can be used.
     mat_x = [mat_x ; inp_vec];
     mat_y = [mat_y ; out_vec];
 end
