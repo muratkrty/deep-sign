@@ -1,5 +1,5 @@
 #deep-sign
--------------------
+
 Off-line singature image classification via Convolutional Neural Networks.
 The signature images were obtained from GDPS database trough licence agreement.
 The GPDS signature image database contains 4000 synthetic signature owners and
@@ -10,4 +10,7 @@ total we have 96000 genuine signature images and 120000 faked signature images.
 **Data pre-processing files**  
   data_preprocessing.py  
   image_preprocessing.py  
+  matlab-data-funcs  
   crate*.m  
+
+-------------------
