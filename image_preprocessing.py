@@ -10,7 +10,7 @@ import re
 import numpy as np
 
 def img_proc_steps(img):
-    """Apply preprocessing steps to convert image as scaled binary image. """
+    '''Apply preprocessing steps to convert image as scaled binary image. '''
     gray_img = cv2.imread(img, cv2.CV_LOAD_IMAGE_GRAYSCALE)
     binarized_img = cv2.threshold(gray_img, 200, 255, cv2.THRESH_BINARY)[1]
     resized_img = cv2.resize(binarized_img, (256, 128))
